@@ -189,6 +189,32 @@
         <Label Name="label6" Foreground="DarkBlue" FontSize="9" FontWeight="Bold" Margin="403,429,313,0" VerticalAlignment="Top" Height="24" RenderTransformOrigin="0.52,0.623" Content="n.Allievi"/>
         <TextBlock Name="txtNStudents" Background="White" HorizontalAlignment="Left" TextAlignment="Center" Foreground="DarkBlue" FontSize="10" FontWeight="Bold" TextWrapping="Wrap" VerticalAlignment="Center" Margin="412,0,0,0" Width="26" Height="16"></TextBlock>
 
+        <Button Name="btnCheckToggle" Background="White" HorizontalAlignment="Left" Margin="456,481,0,0" VerticalAlignment="Top" Click="Button_Click" Height="45" Width="92">
+
+            <TextBlock HorizontalAlignment="Center" TextAlignment="Center" Foreground="DarkBlue" TextWrapping = "Wrap" FontSize="15" FontWeight="Bold" Width="83" Height="17">cambio X</TextBlock>
+
+        </Button>
+        <Button Name="btnCheckRevenge" Background="White" HorizontalAlignment="Left" Margin="456,555,0,0" VerticalAlignment="Top" Click="Button_Click" Height="45" Width="92">
+
+            <TextBlock HorizontalAlignment="Left" TextAlignment="Center" Foreground="DarkBlue" TextWrapping = "Wrap" FontSize="15" FontWeight="Bold" Width="83" Height="39">X di vendetta</TextBlock>
+
+        </Button>
+        <Button Name="btnCheckNoGrade" Background="White" HorizontalAlignment="Left" Margin="456,641,0,0" VerticalAlignment="Top" Click="Button_Click" Height="45" Width="92">
+
+            <TextBlock HorizontalAlignment="Center" TextAlignment="Center" Foreground="DarkBlue" TextWrapping = "Wrap" FontSize="15" FontWeight="Bold" Width="83" Height="17">X no voti</TextBlock>
+
+        </Button>
+        <Button Name="btnCheckNone" Background="White" HorizontalAlignment="Left" Margin="456,720,0,0" VerticalAlignment="Top" Click="Button_Click" Height="45" Width="92">
+
+            <TextBlock HorizontalAlignment="Left" TextAlignment="Center" Foreground="DarkBlue" TextWrapping = "Wrap" FontSize="15" FontWeight="Bold" Width="63" Height="39">X  nessuno</TextBlock>
+
+        </Button>
+        <Button Name="btnCheckAll" Background="White" HorizontalAlignment="Left" Margin="456,641,0,0" VerticalAlignment="Top" Click="Button_Click" Height="45" Width="92">
+
+            <TextBlock HorizontalAlignment="Center" TextAlignment="Center" Foreground="DarkBlue" TextWrapping = "Wrap" FontSize="15" FontWeight="Bold" Width="83" Height="17">X tutti</TextBlock>
+
+        </Button>
+
     </Grid>
 
 </Window>
