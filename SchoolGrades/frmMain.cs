@@ -1840,5 +1840,170 @@ namespace SchoolGrades
                 currentStudentsList[i].Eligible = (bool)r.Cells[0].Value;
             }
         }
+
+        private void picBackgroundSaveRunning_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtTimeInterval_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblDatabaseFile_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblLastDatabaseModification_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void grpImageSource_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void chkGivenFolder_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void chkLessonsPictures_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rdbMustDraw_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rdbMustSort_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void grpSorts_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rdbDrawEqualProbability_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rdbDrawByWeightsSum_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rdbDrawByOldestFirst_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rdbDrawNoOfGrades_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rdbSortByAlphbetical_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rdbDrawLowGradesFirst_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblGradeType_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void chkSuspence_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblSchoolSubject_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblVindicationFactor_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtRevengeFactor_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblIdStudent_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtIdStudent_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtMinuteStartLesson_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtDurationLesson_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtAdvanceMinutes_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtNStudents_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

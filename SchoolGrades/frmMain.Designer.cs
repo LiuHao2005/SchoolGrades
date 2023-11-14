@@ -183,6 +183,7 @@
             txtMinuteStartLesson.Text = "0";
             txtMinuteStartLesson.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             toolTip1.SetToolTip(txtMinuteStartLesson, "Minuto inizio lezione");
+            txtMinuteStartLesson.TextChanged += txtMinuteStartLesson_TextChanged;
             txtMinuteStartLesson.Leave += LessonAlarmChanged;
             // 
             // txtDurationLesson
@@ -196,6 +197,7 @@
             txtDurationLesson.Text = "60";
             txtDurationLesson.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             toolTip1.SetToolTip(txtDurationLesson, "Minuti durata lezione");
+            txtDurationLesson.TextChanged += txtDurationLesson_TextChanged;
             txtDurationLesson.Leave += LessonAlarmChanged;
             // 
             // txtAdvanceMinutes
@@ -209,6 +211,7 @@
             txtAdvanceMinutes.Text = "8";
             txtAdvanceMinutes.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             toolTip1.SetToolTip(txtAdvanceMinutes, "Minuti per allarme prima della fine");
+            txtAdvanceMinutes.TextChanged += txtAdvanceMinutes_TextChanged;
             txtAdvanceMinutes.Leave += LessonAlarmChanged;
             // 
             // txtRevengeFactor
@@ -221,6 +224,7 @@
             txtRevengeFactor.TabIndex = 144;
             txtRevengeFactor.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             toolTip1.SetToolTip(txtRevengeFactor, "Fattore di vendetta dell'allievo corrente");
+            txtRevengeFactor.TextChanged += txtRevengeFactor_TextChanged;
             // 
             // btnCheckNone
             // 
@@ -244,7 +248,7 @@
             lstClasses.ForeColor = System.Drawing.Color.DarkBlue;
             lstClasses.FormattingEnabled = true;
             lstClasses.ItemHeight = 18;
-            lstClasses.Location = new System.Drawing.Point(86, 4);
+            lstClasses.Location = new System.Drawing.Point(87, 4);
             lstClasses.Name = "lstClasses";
             lstClasses.Size = new System.Drawing.Size(76, 130);
             lstClasses.TabIndex = 46;
@@ -388,6 +392,7 @@
             rdbDrawByOldestFirst.Text = "Prima voti vecchi";
             toolTip1.SetToolTip(rdbDrawByOldestFirst, "Ordinamento con prima i voti più vecchi del tipo selezionato");
             rdbDrawByOldestFirst.UseVisualStyleBackColor = true;
+            rdbDrawByOldestFirst.CheckedChanged += rdbDrawByOldestFirst_CheckedChanged;
             // 
             // rdbDrawNoOfGrades
             // 
@@ -399,6 +404,7 @@
             rdbDrawNoOfGrades.Text = "Numero voti";
             toolTip1.SetToolTip(rdbDrawNoOfGrades, "Ordinamento in base al numero dei voti del tipo selezionato");
             rdbDrawNoOfGrades.UseVisualStyleBackColor = true;
+            rdbDrawNoOfGrades.CheckedChanged += rdbDrawNoOfGrades_CheckedChanged;
             // 
             // rdbDrawLowGradesFirst
             // 
@@ -411,6 +417,7 @@
             rdbDrawLowGradesFirst.Text = "Prima voti bassi";
             toolTip1.SetToolTip(rdbDrawLowGradesFirst, "Ordinamento per voto descrescente");
             rdbDrawLowGradesFirst.UseVisualStyleBackColor = true;
+            rdbDrawLowGradesFirst.CheckedChanged += rdbDrawLowGradesFirst_CheckedChanged;
             // 
             // rdbSortByAlphbetical
             // 
@@ -422,6 +429,7 @@
             rdbSortByAlphbetical.Text = "Alfabetico";
             toolTip1.SetToolTip(rdbSortByAlphbetical, "Ordinamento alfabetico");
             rdbSortByAlphbetical.UseVisualStyleBackColor = true;
+            rdbSortByAlphbetical.CheckedChanged += rdbSortByAlphbetical_CheckedChanged;
             // 
             // rdbDrawByWeightsSum
             // 
@@ -433,6 +441,7 @@
             rdbDrawByWeightsSum.Text = "Peso totale dei voti";
             toolTip1.SetToolTip(rdbDrawByWeightsSum, "Ordinamento secondo il peso totale del tipo di voto selezionato");
             rdbDrawByWeightsSum.UseVisualStyleBackColor = true;
+            rdbDrawByWeightsSum.CheckedChanged += rdbDrawByWeightsSum_CheckedChanged;
             // 
             // rdbDrawEqualProbability
             // 
@@ -446,6 +455,7 @@
             rdbDrawEqualProbability.Text = "Probabilità uguali";
             toolTip1.SetToolTip(rdbDrawEqualProbability, "Sorteggio con uguali probabilitàfra ogni allievo");
             rdbDrawEqualProbability.UseVisualStyleBackColor = true;
+            rdbDrawEqualProbability.CheckedChanged += rdbDrawEqualProbability_CheckedChanged;
             // 
             // btnSetup
             // 
@@ -691,6 +701,7 @@
             chkSuspence.Text = "suspence";
             toolTip1.SetToolTip(chkSuspence, "Aspetta un po' prima di estrarre, suonando una musica");
             chkSuspence.UseVisualStyleBackColor = true;
+            chkSuspence.CheckedChanged += chkSuspence_CheckedChanged;
             // 
             // btnCheckRevenge
             // 
@@ -719,6 +730,7 @@
             lblVindicationFactor.TabIndex = 145;
             lblVindicationFactor.Text = "F.V.";
             toolTip1.SetToolTip(lblVindicationFactor, "Fattore di vendetta dell'allievo corrente");
+            lblVindicationFactor.Click += lblVindicationFactor_Click;
             // 
             // label1
             // 
@@ -731,6 +743,7 @@
             label1.TabIndex = 149;
             label1.Text = "Minuto inizio";
             toolTip1.SetToolTip(label1, "Minuto di  inizio della lezione");
+            label1.Click += label1_Click;
             // 
             // label3
             // 
@@ -743,6 +756,7 @@
             label3.TabIndex = 150;
             label3.Text = "Minuti durata";
             toolTip1.SetToolTip(label3, "Minuti di durata della lezione");
+            label3.Click += label3_Click;
             // 
             // label4
             // 
@@ -755,6 +769,7 @@
             label4.TabIndex = 151;
             label4.Text = "Anticipo minuti";
             toolTip1.SetToolTip(label4, "Minuti di anticipo dell'allarme rispetto a fine lezione ");
+            label4.Click += label4_Click;
             // 
             // btnClassesGradesSummary
             // 
@@ -816,6 +831,7 @@
             lblDatabaseFile.Text = "lblDatabaseFile";
             toolTip1.SetToolTip(lblDatabaseFile, "Nome del file del database. ");
             lblDatabaseFile.Visible = false;
+            lblDatabaseFile.Click += lblDatabaseFile_Click;
             // 
             // btnYearTopics
             // 
@@ -862,6 +878,7 @@
             lblIdStudent.TabIndex = 163;
             lblIdStudent.Text = "Id allievo";
             toolTip1.SetToolTip(lblIdStudent, "Media pesata di tutti i microvoti visualizzati. Salvata nel voto complessivo. Si può modificare. ");
+            lblIdStudent.Click += lblIdStudent_Click;
             // 
             // txtIdStudent
             // 
@@ -875,6 +892,7 @@
             txtIdStudent.TabStop = false;
             txtIdStudent.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             toolTip1.SetToolTip(txtIdStudent, "Codice del voto \"padre\", sotto il quale stanno tuttu queste microvalutazioni ");
+            txtIdStudent.TextChanged += txtIdStudent_TextChanged;
             // 
             // btnTemporary
             // 
@@ -900,6 +918,7 @@
             txtTimeInterval.Text = "0";
             txtTimeInterval.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             toolTip1.SetToolTip(txtTimeInterval, "Minuti per allarme prima della fine");
+            txtTimeInterval.TextChanged += txtTimeInterval_TextChanged;
             // 
             // btnStartColorTimer
             // 
@@ -955,6 +974,7 @@
             chkLessonsPictures.Text = "lezioni";
             toolTip1.SetToolTip(chkLessonsPictures, "Estrazione fra  le immagini mostrate durante le lezioni");
             chkLessonsPictures.UseVisualStyleBackColor = true;
+            chkLessonsPictures.CheckedChanged += chkLessonsPictures_CheckedChanged;
             // 
             // chkGivenFolder
             // 
@@ -966,6 +986,7 @@
             chkGivenFolder.Text = "cartella";
             toolTip1.SetToolTip(chkGivenFolder, "Estrazione fra le immmagini che stanno sotto la cartella data");
             chkGivenFolder.UseVisualStyleBackColor = true;
+            chkGivenFolder.CheckedChanged += chkGivenFolder_CheckedChanged;
             // 
             // picBackgroundSaveRunning
             // 
@@ -978,6 +999,7 @@
             picBackgroundSaveRunning.TabIndex = 171;
             picBackgroundSaveRunning.TabStop = false;
             toolTip1.SetToolTip(picBackgroundSaveRunning, "Rosso mentre il programma salva in background");
+            picBackgroundSaveRunning.Click += picBackgroundSaveRunning_Click;
             // 
             // txtNStudents
             // 
@@ -989,6 +1011,7 @@
             txtNStudents.TabIndex = 174;
             txtNStudents.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             toolTip1.SetToolTip(txtNStudents, "Minuti per allarme prima della fine");
+            txtNStudents.TextChanged += txtNStudents_TextChanged;
             // 
             // label6
             // 
@@ -1001,6 +1024,7 @@
             label6.TabIndex = 175;
             label6.Text = "n.Allievi";
             toolTip1.SetToolTip(label6, "Minuto di  inizio della lezione");
+            label6.Click += label6_Click;
             // 
             // btnStudentsNotes
             // 
@@ -1100,6 +1124,7 @@
             lblLastDatabaseModification.Text = "lblLastDatabaseModification";
             toolTip1.SetToolTip(lblLastDatabaseModification, "Nome del file del database. ");
             lblLastDatabaseModification.Visible = false;
+            lblLastDatabaseModification.Click += lblLastDatabaseModification_Click;
             // 
             // lblStudentChosen
             // 
@@ -1160,6 +1185,7 @@
             grpSorts.TabIndex = 69;
             grpSorts.TabStop = false;
             grpSorts.Text = "Criteri sorteg. o ordinam.";
+            grpSorts.Enter += grpSorts_Enter;
             // 
             // btnAssess
             // 
@@ -1186,6 +1212,7 @@
             lblSchoolSubject.Size = new System.Drawing.Size(64, 18);
             lblSchoolSubject.TabIndex = 109;
             lblSchoolSubject.Text = "Materia";
+            lblSchoolSubject.Click += lblSchoolSubject_Click;
             // 
             // lblGradeType
             // 
@@ -1197,6 +1224,7 @@
             lblGradeType.Size = new System.Drawing.Size(131, 18);
             lblGradeType.TabIndex = 110;
             lblGradeType.Text = "Tipo valutazione";
+            lblGradeType.Click += lblGradeType_Click;
             // 
             // timerLesson
             // 
@@ -1228,6 +1256,7 @@
             grpImageSource.TabIndex = 158;
             grpImageSource.TabStop = false;
             grpImageSource.Text = "Sorg.immag.";
+            grpImageSource.Enter += grpImageSource_Enter;
             // 
             // grpChooseDrawSort
             // 
@@ -1250,6 +1279,7 @@
             rdbMustSort.TabIndex = 1;
             rdbMustSort.Text = "Ordinam.";
             rdbMustSort.UseVisualStyleBackColor = true;
+            rdbMustSort.CheckedChanged += rdbMustSort_CheckedChanged;
             // 
             // rdbMustDraw
             // 
@@ -1262,6 +1292,7 @@
             rdbMustDraw.TabStop = true;
             rdbMustDraw.Text = "Sorteggio";
             rdbMustDraw.UseVisualStyleBackColor = true;
+            rdbMustDraw.CheckedChanged += rdbMustDraw_CheckedChanged;
             // 
             // lstTimeInterval
             // 
@@ -1269,7 +1300,7 @@
             lstTimeInterval.FormattingEnabled = true;
             lstTimeInterval.ItemHeight = 18;
             lstTimeInterval.Items.AddRange(new object[] { "05", "10", "15", "30", "45", "60" });
-            lstTimeInterval.Location = new System.Drawing.Point(172, 28);
+            lstTimeInterval.Location = new System.Drawing.Point(173, 28);
             lstTimeInterval.Name = "lstTimeInterval";
             lstTimeInterval.Size = new System.Drawing.Size(32, 112);
             lstTimeInterval.TabIndex = 166;
@@ -1306,6 +1337,7 @@
             label8.Size = new System.Drawing.Size(41, 13);
             label8.TabIndex = 180;
             label8.Text = "tempo";
+            label8.Click += label8_Click;
             // 
             // label9
             // 
@@ -1317,6 +1349,7 @@
             label9.Size = new System.Drawing.Size(26, 13);
             label9.TabIndex = 182;
             label9.Text = "min";
+            label9.Click += label9_Click;
             // 
             // timerPopUp
             // 
